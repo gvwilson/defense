@@ -1,0 +1,32 @@
+[project]
+name = "defense"
+dynamic = ["version"]
+description = "Traveler defense game"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pygame>=2.6.1",
+    "pygame-gui>=0.6.14",
+]
+authors = [
+    {name = "Greg Wilson", email = "gvwilson@third-bit.com"},
+]
+
+[dependency-groups]
+dev = [
+    "build>=1.4.0",
+    "pytest>=9.0.2",
+    "ruff>=0.15.0",
+    "twine>=6.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/defense"]
+include = ["src/defense/static/*"]
+
+[tool.hatch.version]
+path = "src/defense/__init__.py"
