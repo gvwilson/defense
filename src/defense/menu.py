@@ -3,8 +3,8 @@
 import pygame
 import pygame_gui
 
+from .constants import MENU_BAR_HEIGHT
 
-MENU_BAR_HEIGHT = 30  # pixels; enough for one line of text with padding
 MENU_BUTTON_WIDTH = 60
 
 
